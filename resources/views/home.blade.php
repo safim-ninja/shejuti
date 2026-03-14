@@ -2,1298 +2,377 @@
 <html lang="en">
 
 <head>
-    <!-- required meta -->
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- #favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-    <!-- #title -->
-    <title>Xpovio - Digital Agency Creative Portfolio Template</title>
-    <!-- #keywords -->
-    <meta name="keywords" content="creative, agency, portfolio">
-    <!-- #description -->
-    <meta name="description" content="Creative Agency Portfolio HTML5 Template">
-    <!-- ==== css dependencies start ==== -->
-    <!-- bootstrap five css -->
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-    <!-- glyphter css -->
-    <link rel="stylesheet" href="assets/vendor/glyyphter/css/xpovio.css">
-    <!-- font awesome six css -->
-    <link rel="stylesheet" href="assets/vendor/font-awesome/css/all.css">
-    <!-- nice select css -->
-    <link rel="stylesheet" href="assets/vendor/nice-select/css/nice-select.css">
-    <!-- magnific popup css -->
-    <link rel="stylesheet" href="assets/vendor/magnific-popup/css/magnific-popup.css">
-    <!-- slick css -->
-    <link rel="stylesheet" href="assets/vendor/slick/css/slick.css">
-    <!-- ==== / css dependencies end ==== -->
-    <!-- main css -->
-    <link rel="stylesheet" href="assets/css/main.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Rubaya Nasrin Shejuti | Portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ asset('ecology.png') }}" type="image/x-icon">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            background: #F8F9FA;
+            color: #333;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #22814a, #2cae71);
+            color: white;
+            padding: 120px 0;
+        }
+
+        .profile-img {
+            width: 260px;
+            border-radius: 50%;
+            border: 6px solid white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Align featured card images */
+        .featured-img {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-title {
+            font-size: 42px;
+            font-weight: 700;
+        }
+
+        .hero-sub {
+            font-size: 20px;
+            opacity: .9;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+            transition: .3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .expertise-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .timeline {
+            border-left: 3px solid #22814a;
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            margin-bottom: 30px;
+        }
+
+        .timeline-item span {
+            color: #22814a;
+            font-weight: 600;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #22814a, #2cae71);
+
+            color: white;
+            padding: 30px 0;
+        }
+    </style>
+
 </head>
 
-<body class="home-two-light">
-    <!--[if lte IE 9]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-      <![endif]-->
-    <div class="my-app ">
-        <!-- ==== preloader start ==== -->
-        <div id="preloader">
-            <div id="loader"></div>
-        </div>
-        <!-- ==== / preloader end ==== -->
-        <!-- ==== mouse cursor drag start ==== -->
-        {{-- <div class="mouseCursor cursor-outer"></div>
-            <div class="mouseCursor cursor-inner">
-                <span>Drag</span>
-            </div> --}}
-        <!-- ==== / mouse cursor drag end ==== -->
-        <!-- ==== header start ==== -->
-        <header class="header">
-            <div class="primary-navbar cmn-nav">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <nav class="navbar p-0">
-                                <div class="navbar__logo">
-                                    <a href="index.html" aria-label="go to home">
-                                        <strong style="font-size: 18px; color: #fff;">Rubaya Nasrin Shejuti</strong>
-                                    </a>
-                                </div>
-                                <div class="navbar__menu">
-                                    <ul>
-                                        <li class="navbar__item nav-fade">
-                                            <a href="#about">About</a>
-                                        </li>
-                                        <li class="navbar__item nav-fade">
-                                            <a href="#expertise">Expertise</a>
-                                        </li>
-                                        <li class="navbar__item nav-fade">
-                                            <a href="#experience">Experience</a>
-                                        </li>
-                                        <li class="navbar__item nav-fade">
-                                            <a href="#achievements">Achievements</a>
-                                        </li>
-                                        <li class="navbar__item nav-fade">
-                                            <a href="#publications">Publications</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="navbar__options">
-                                    <div class="navbar__mobile-options d-none d-sm-flex">
-                                        <a href="#contact" class="btn btn--secondary">Get In Touch</a>
-                                    </div>
-                                    <button class="open-mobile-menu d-flex d-xl-none" aria-label="toggle mobile menu">
-                                        <i class="fa-light fa-bars-staggered"></i>
-                                    </button>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <!-- ==== mobile menu start ==== -->
-                <div class="mobile-menu">
-                    <nav class="mobile-menu__wrapper">
-                        <div class="mobile-menu__header nav-fade">
-                            <div class="logo">
-                                <a href="index.html">
-                                    <img src="assets/images/logo.png" alt="" title="">
-                                </a>
-                            </div>
-                            <a href="javascript:void(0)" aria-label="close mobile menu" class="close-mobile-menu">
-                                <i class="fa-light fa-xmark-large"></i>
-                            </a>
-                        </div>
-                        <div class="mobile-menu__list"></div>
-                        <div class="mobile-menu__options d-flex d-sm-none justify-content-center nav-fade"></div>
-                        <div class="mobile-menu__social social nav-fade">
-                            <a href="https://www.facebook.com/" target="_blank" aria-label="share us on facebook">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="https://www.twitter.com/" target="_blank" aria-label="share us on twitter">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                            <a href="https://www.pinterest.com/" target="_blank" aria-label="share us on pinterest">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://www.instagram.com/" target="_blank" aria-label="share us on instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                        </div>
-                    </nav>
-                </div>
-                <div class="mobile-menu__backdrop"></div>
-                <!-- ==== / mobile menu end ==== -->
-            </div>
-        </header>
-        <!-- ==== / header end ==== -->
-        <div id="smooth-wrapper">
-            <div id="smooth-content">
-                <!-- ==== main start ==== -->
-                <main>
-                    <!-- ==== banner start ==== -->
-                    <section class="banner-two">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="banner-two-inner">
-                                        <div class="banner-two__meta">
-                                            <div class="thumb">
-                                                <img src="assets/images/1672715021102.jpeg"
-                                                    style="max-width: 40%;border-radius: 50%;" alt="Image">
-                                                {{-- <video autoplay="autoplay" loop muted controls>
-                                       <source src="assets/images/banner-video.mp4" type="video/mp4">
-                                    </video> --}}
-                                            </div>
-                                            <div class="cta section__content-cta m-0">
-                                                <div class="single">
-                                                    <h5 class="fw-7">
-                                                        9+
-                                                    </h5>
-                                                    <p class="fw-5">Years of Experience</p>
-                                                </div>
-                                                <div class="single">
-                                                    <h5 class="fw-7">
-                                                        1.4k+
-                                                    </h5>
-                                                    <p class="fw-5">LinkedIn Followers</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="banner-two__content">
-                                            <h1 class="title-anim">
-                                                ENVIRONMENTAL
-                                                <span>DEVELOPMENT</span>
-                                                PROFESSIONAL
-                                            </h1>
-                                            <div class="banner-two__content-cta section__content-cta">
-                                                <div class="paragraph">
-                                                    <p>Passionate development professional specializing in Climate
-                                                        Change, Sustainability, and Disaster Management. Working on
-                                                        enhancing knowledge through research, GIS, and Remote Sensing
-                                                        techniques with a commitment to environmental development.</p>
-                                                </div>
-                                                <div class="arrow-wrapper d-none d-lg-block">
-                                                    <span class="arrow"></span>
-                                                </div>
-                                                <div class="cta">
-                                                    <a href="#contact" class="btn btn--secondary">
-                                                        Get In Touch
-                                                        <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <img src="assets/images/banner/dawn-light.png" alt="Image" class="dawn">
-                    </section>
-                    <!-- ==== / banner end ==== -->
-                    <!-- ==== sponsor start ==== -->
-                    <div class="sponsor section liner light spo-light">
-                        <div class="container-fluid">
-                            <div class="row justify-content-center">
-                                <div class="col-12 col-lg-8">
-                                    <div class="section__header text-center">
-                                        <span class="sub-title mb-0">
-                                            RECOGNIZED BY
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row justify-content-center">
-                                <div class="col-12">
-                                    <div class="sponsor__slider ">
-                                        <div class="sponsor__slider-item">
-                                            <img src="assets/images/sponsor/one-dark.png" alt="Image">
-                                        </div>
-                                        <div class="sponsor__slider-item">
-                                            <img src="assets/images/sponsor/two-dark.png" alt="Image">
-                                        </div>
-                                        <div class="sponsor__slider-item">
-                                            <img src="assets/images/sponsor/three-dark.png" alt="Image">
-                                        </div>
-                                        <div class="sponsor__slider-item">
-                                            <img src="assets/images/sponsor/four-dark.png" alt="Image">
-                                        </div>
-                                        <div class="sponsor__slider-item">
-                                            <img src="assets/images/sponsor/five-dark.png" alt="Image">
-                                        </div>
-                                        <div class="sponsor__slider-item">
-                                            <img src="assets/images/sponsor/six-dark.png" alt="Image">
-                                        </div>
-                                        <div class="sponsor__slider-item">
-                                            <img src="assets/images/sponsor/one-dark.png" alt="Image">
-                                        </div>
-                                        <div class="sponsor__slider-item">
-                                            <img src="assets/images/sponsor/two-dark.png" alt="Image">
-                                        </div>
-                                        <div class="sponsor__slider-item">
-                                            <img src="assets/images/sponsor/three-dark.png" alt="Image">
-                                        </div>
-                                        <div class="sponsor__slider-item">
-                                            <img src="assets/images/sponsor/four-dark.png" alt="Image">
-                                        </div>
-                                        <div class="sponsor__slider-item">
-                                            <img src="assets/images/sponsor/five-dark.png" alt="Image">
-                                        </div>
-                                        <div class="sponsor__slider-item">
-                                            <img src="assets/images/sponsor/six-dark.png" alt="Image">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ==== / sponsor end ==== -->
-                    <!-- ==== award start ==== -->
-                    <section class="section award">
-                        <div class="container">
-                            <div class="row gaper align-items-center">
-                                <div class="col-12 col-lg-6">
-                                    <div class="award__thumb dir-rtl">
-                                        <img src="assets/images/award-thumb.png" alt="Image"
-                                            class="unset fade-left">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-6 col-xxl-5 offset-xxl-1">
-                                    <div class="award__content section__content">
-                                        <span class="sub-title">
-                                            MY ACHIEVEMENTS
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </span>
-                                        <h2 class="title title-anim">
-                                            Recognition &
-                                            <span>Awards</span>
-                                        </h2>
-                                        <div class="paragraph">
-                                            <p>YVC Leader 2025, YCP 2023 Alumni, Duke of Edinburgh's Gold Awardee 2018,
-                                                UPG Sustainability Leader 2022, and Alumni of Asian African Youth
-                                                Leadership Festival 2019. Recognized for excellence in environmental
-                                                development and climate action.</p>
-                                        </div>
-                                        <div class="award__content-meta">
-                                            <div class="single">
-                                                <h4>2025</h4>
-                                                <h4>YVC Leader</h4>
-                                                <p>Global Recognition</p>
-                                            </div>
-                                            <div class="single">
-                                                <h4>2018</h4>
-                                                <h4>Duke Award</h4>
-                                                <p>Gold Awardee</p>
-                                            </div>
-                                            <div class="single">
-                                                <h4>2022</h4>
-                                                <h4>UPG Leader</h4>
-                                                <p>Sustainability</p>
-                                            </div>
-                                        </div>
-                                        <div class="section__content-cta">
-                                            <a href="https://www.linkedin.com/in/rubaya-nasrin-shejuti-66713a6b/"
-                                                target="_blank" class="btn btn--primary">View LinkedIn</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <img src="assets/images/star.png" alt="Image" class="star">
-                        <img src="assets/images/star.png" alt="Image" class="star-two">
-                        <img src="assets/images/agency/dot-large.png" alt="Image" class="dot">
-                        <img src="assets/images/agency/dot-large.png" alt="Image" class="dot-two">
-                    </section>
-                    <!-- ==== / award end ==== -->
-                    <!-- ==== offer start ==== -->
-                    <section class="section offer-two light offer-two-light">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-12 col-lg-8">
-                                    <div class="section__header text-center">
-                                        <span class="sub-title">
-                                            AREAS OF EXPERTISE
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </span>
-                                        <h2 class="title title-anim">KEY COMPETENCIES</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="offer-two__slider">
-                            <div class="offer-two__slider-single offer__cta">
-                                <div class="offer__cta-single">
-                                    <span class="sub-title">
-                                        01
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </span>
-                                    <h2>
-                                        <a href="javascript:void(0)">
-                                            Climate Change & Sustainability
-                                        </a>
-                                    </h2>
-                                    <div class="offer-thumb-hover d-none d-md-block"
-                                        data-background="assets/images/ball.png">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="offer-two__slider-single offer__cta">
-                                <div class="offer__cta-single">
-                                    <span class="sub-title">
-                                        02
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </span>
-                                    <h2>
-                                        <a href="javascript:void(0)">
-                                            Disaster Management
-                                        </a>
-                                    </h2>
-                                    <div class="offer-thumb-hover d-none d-md-block"
-                                        data-background="assets/images/ball.png">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="offer-two__slider-single offer__cta">
-                                <div class="offer__cta-single">
-                                    <span class="sub-title">
-                                        03
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </span>
-                                    <h2>
-                                        <a href="javascript:void(0)">
-                                            GIS & Remote Sensing
-                                        </a>
-                                    </h2>
-                                    <div class="offer-thumb-hover d-none d-md-block"
-                                        data-background="assets/images/ball.png">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="offer-two__slider-single offer__cta">
-                                <div class="offer__cta-single">
-                                    <span class="sub-title">
-                                        04
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </span>
-                                    <h2>
-                                        <a href="javascript:void(0)">
-                                            Qualitative Research
-                                        </a>
-                                    </h2>
-                                    <div class="offer-thumb-hover d-none d-md-block"
-                                        data-background="assets/images/ball.png">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="offer-two__slider-single offer__cta">
-                                <div class="offer__cta-single">
-                                    <span class="sub-title">
-                                        05
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </span>
-                                    <h2>
-                                        <a href="javascript:void(0)">
-                                            Project Management
-                                        </a>
-                                    </h2>
-                                    <div class="offer-thumb-hover d-none d-md-block"
-                                        data-background="assets/images/ball.png">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="offer-two__slider-single offer__cta">
-                                <div class="offer__cta-single">
-                                    <span class="sub-title">
-                                        06
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </span>
-                                    <h2>
-                                        <a href="javascript:void(0)">
-                                            Environmental Activism
-                                        </a>
-                                    </h2>
-                                    <div class="offer-thumb-hover d-none d-md-block"
-                                        data-background="assets/images/ball.png">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="offer-two__slider-single offer__cta">
-                                <div class="offer__cta-single">
-                                    <span class="sub-title">
-                                        07
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </span>
-                                    <h2>
-                                        <a href="service-single.html">
-                                            Ecommerce Solutions
-                                        </a>
-                                    </h2>
-                                    <div class="offer-thumb-hover d-none d-md-block"
-                                        data-background="assets/images/ball.png">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="offer-two__slider-single offer__cta">
-                                <div class="offer__cta-single">
-                                    <span class="sub-title">
-                                        08
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </span>
-                                    <h2>
-                                        <a href="service-single.html">
-                                            Photography
-                                        </a>
-                                    </h2>
-                                    <div class="offer-thumb-hover d-none d-md-block"
-                                        data-background="assets/images/ball.png">
-                                    </div>
-                                </div>
-                            </div>
-                            <div dir="rtl">
-                                <div class="offer-two__slider-rtl">
-                                    <div class="offer-two__slider-single offer__cta">
-                                        <div class="offer__cta-single">
-                                            <span class="sub-title">
-                                                01
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </span>
-                                            <h2>
-                                                <a href="service-single.html">
-                                                    uI / uX experience
-                                                </a>
-                                            </h2>
-                                            <div class="offer-thumb-hover d-none d-md-block"
-                                                data-background="assets/images/ball.png">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="offer-two__slider-single offer__cta">
-                                        <div class="offer__cta-single">
-                                            <span class="sub-title">
-                                                02
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </span>
-                                            <h2>
-                                                <a href="service-single.html">
-                                                    Product Design
-                                                </a>
-                                            </h2>
-                                            <div class="offer-thumb-hover d-none d-md-block"
-                                                data-background="assets/images/ball.png">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="offer-two__slider-single offer__cta">
-                                        <div class="offer__cta-single">
-                                            <span class="sub-title">
-                                                03
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </span>
-                                            <h2>
-                                                <a href="service-single.html">
-                                                    Digital Marketing
-                                                </a>
-                                            </h2>
-                                            <div class="offer-thumb-hover d-none d-md-block"
-                                                data-background="assets/images/ball.png">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="offer-two__slider-single offer__cta">
-                                        <div class="offer__cta-single">
-                                            <span class="sub-title">
-                                                04
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </span>
-                                            <h2>
-                                                <a href="service-single.html">
-                                                    Web Development
-                                                </a>
-                                            </h2>
-                                            <div class="offer-thumb-hover d-none d-md-block"
-                                                data-background="assets/images/ball.png">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="offer-two__slider-single offer__cta">
-                                        <div class="offer__cta-single">
-                                            <span class="sub-title">
-                                                05
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </span>
-                                            <h2>
-                                                <a href="service-single.html">
-                                                    Mobile App
-                                                </a>
-                                            </h2>
-                                            <div class="offer-thumb-hover d-none d-md-block"
-                                                data-background="assets/images/ball.png">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="offer-two__slider-single offer__cta">
-                                        <div class="offer__cta-single">
-                                            <span class="sub-title">
-                                                06
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </span>
-                                            <h2>
-                                                <a href="service-single.html">
-                                                    Custom Solutions
-                                                </a>
-                                            </h2>
-                                            <div class="offer-thumb-hover d-none d-md-block"
-                                                data-background="assets/images/ball.png">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="offer-two__slider-single offer__cta">
-                                        <div class="offer__cta-single">
-                                            <span class="sub-title">
-                                                07
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </span>
-                                            <h2>
-                                                <a href="service-single.html">
-                                                    Ecommerce Solutions
-                                                </a>
-                                            </h2>
-                                            <div class="offer-thumb-hover d-none d-md-block"
-                                                data-background="assets/images/ball.png">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="offer-two__slider-single offer__cta">
-                                        <div class="offer__cta-single">
-                                            <span class="sub-title">
-                                                08
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </span>
-                                            <h2>
-                                                <a href="service-single.html">
-                                                    Photography
-                                                </a>
-                                            </h2>
-                                            <div class="offer-thumb-hover d-none d-md-block"
-                                                data-background="assets/images/ball.png">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                    </section>
-                    <!-- ==== / offer end ==== -->
-                    <!-- ==== video modal start ==== -->
-                    {{-- <div class="video-modal">
-                        <img src="assets/images/modal-bg.png" alt="Image" class="modal-bg">
-                        <a class="video-frame video-btn" href="https://www.youtube.com/watch?v=RvreULjnzFo"
-                            target="_blank">
-                            <img src="assets/images/video-frame-two.png" alt="Image">
-                            <i class="fa-sharp fa-solid fa-play"></i>
-                        </a>
-                    </div> --}}
-                    <!-- ==== / video modal end ==== -->
-                    <!-- ==== portfolio start ==== -->
-                    <section class="section portfolio portfolio-two portfolio-filter fade-wrapper">
-                        <div class="portfolio__text-slider">
-                            <div class="portfolio__text-slider-single">
-                                <h2 class="h1">
-                                    <a href="portfolio.html">
-                                        digital portfolio
-                                        <i class="fa-sharp fa-solid fa-arrow-down-right"></i>
-                                    </a>
-                                </h2>
-                            </div>
-                            <div class="portfolio__text-slider-single">
-                                <h2 class="h1">
-                                    <a href="portfolio.html">
-                                        digital portfolio
-                                        <i class="fa-sharp fa-solid fa-arrow-down-right"></i>
-                                    </a>
-                                </h2>
-                            </div>
-                            <div class="portfolio__text-slider-single">
-                                <h2 class="h1">
-                                    <a href="portfolio.html">
-                                        digital portfolio
-                                        <i class="fa-sharp fa-solid fa-arrow-down-right"></i>
-                                    </a>
-                                </h2>
-                            </div>
-                            <div class="portfolio__text-slider-single">
-                                <h2 class="h1">
-                                    <a href="portfolio.html">
-                                        digital portfolio
-                                        <i class="fa-sharp fa-solid fa-arrow-down-right"></i>
-                                    </a>
-                                </h2>
-                            </div>
-                            <div class="portfolio__text-slider-single">
-                                <h2 class="h1">
-                                    <a href="portfolio.html">
-                                        digital portfolio
-                                        <i class="fa-sharp fa-solid fa-arrow-down-right"></i>
-                                    </a>
-                                </h2>
-                            </div>
-                            <div class="portfolio__text-slider-single">
-                                <h2 class="h1">
-                                    <a href="portfolio.html">
-                                        digital portfolio
-                                        <i class="fa-sharp fa-solid fa-arrow-down-right"></i>
-                                    </a>
-                                </h2>
-                            </div>
-                            <div class="portfolio__text-slider-single">
-                                <h2 class="h1">
-                                    <a href="portfolio.html">
-                                        digital portfolio
-                                        <i class="fa-sharp fa-solid fa-arrow-down-right"></i>
-                                    </a>
-                                </h2>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-12 col-lg-6 col-xl-4 text-center">
-                                    <div class="portfolio-two__filter-btn section__header g-ind">
-                                        <button aria-label="Filter Portfolio" data-filter="*" class="active">
-                                            <span>01</span>
-                                            All
-                                        </button>
-                                        <button aria-label="Filter Portfolio" data-filter=".design">
-                                            <span>02</span>
-                                            Design
-                                        </button>
-                                        <button aria-label="Filter Portfolio" data-filter=".development">
-                                            <span>03</span>
-                                            Development
-                                        </button>
-                                        <button aria-label="Filter Portfolio" data-filter=".technology">
-                                            <span>04</span>
-                                            Technology
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row masonry-grid">
-                                <div
-                                    class="col-12 col-md-6 col-xl-4 filter-item-space grid-item-main technology development">
-                                    <div class="portfolio__single portfolio__single-active topy-tilt fade-top">
-                                        <a href="portfolio.html">
-                                            <img src="assets/images/portfolio/one.png" alt="Image">
-                                        </a>
-                                        <div class="portfolio__single-content">
-                                            <a href="portfolio.html">
-                                                <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                            </a>
-                                            <h4>
-                                                <a href="portfolio.html">Digital Marketing</a>
-                                            </h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 col-xl-4 filter-item-space grid-item-main design">
-                                    <div class="portfolio__single topy-tilt fade-top">
-                                        <a href="portfolio.html">
-                                            <img src="assets/images/portfolio/two.png" alt="Image">
-                                        </a>
-                                        <div class="portfolio__single-content">
-                                            <a href="portfolio.html">
-                                                <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                            </a>
-                                            <h4>
-                                                <a href="portfolio.html">Digital Marketing</a>
-                                            </h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    class="col-12 col-md-6 col-xl-4 filter-item-space grid-item-main technology development">
-                                    <div class="portfolio__single topy-tilt fade-top">
-                                        <a href="portfolio.html">
-                                            <img src="assets/images/portfolio/three.png" alt="Image">
-                                        </a>
-                                        <div class="portfolio__single-content">
-                                            <a href="portfolio.html">
-                                                <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                            </a>
-                                            <h4>
-                                                <a href="portfolio.html">Digital Marketing</a>
-                                            </h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 col-xl-4 filter-item-space grid-item-main design">
-                                    <div class="portfolio__single topy-tilt fade-top">
-                                        <a href="portfolio.html">
-                                            <img src="assets/images/portfolio/four.png" alt="Image">
-                                        </a>
-                                        <div class="portfolio__single-content">
-                                            <a href="portfolio.html">
-                                                <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                            </a>
-                                            <h4>
-                                                <a href="portfolio.html">Digital Marketing</a>
-                                            </h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    class="col-12 col-md-6 col-xl-4 filter-item-space grid-item-main design development">
-                                    <div class="portfolio__single topy-tilt fade-top">
-                                        <a href="portfolio.html">
-                                            <img src="assets/images/portfolio/five.png" alt="Image">
-                                        </a>
-                                        <div class="portfolio__single-content">
-                                            <a href="portfolio.html">
-                                                <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                            </a>
-                                            <h4>
-                                                <a href="portfolio.html">Digital Marketing</a>
-                                            </h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    class="col-12 col-md-6 col-xl-4 filter-item-space grid-item-main design technology development">
-                                    <div class="portfolio__single topy-tilt fade-top">
-                                        <a href="portfolio.html">
-                                            <img src="assets/images/portfolio/one.png" alt="Image">
-                                        </a>
-                                        <div class="portfolio__single-content">
-                                            <a href="portfolio.html">
-                                                <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                            </a>
-                                            <h4>
-                                                <a href="portfolio.html">Digital Marketing</a>
-                                            </h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- ==== / portfolio end ==== -->
-                    <!-- ==== testimonial start ==== -->
-                    <section class="section testimonial-two">
-                        <div class="container">
-                            <div class="row gaper align-items-center">
-                                <div class="col-12 col-lg-5 col-xxl-4">
-                                    <div class="testimonial-two__thumb">
-                                        <img src="assets/images/testimonial/thumb.png" alt="Image">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-7 col-xxl-7 offset-xxl-1">
-                                    <div class="testimonial-two__content section__content testimonial-g-con">
-                                        <span class="sub-title">
-                                            testimonial
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </span>
-                                        <h2 class="title title-anim">
-                                            Some Of Our Respected Happy Clients Says
-                                        </h2>
-                                        <div class="quote">
-                                            <i class="fa-sharp fa-solid fa-quote-right"></i>
-                                        </div>
-                                        <div class="testimonial-two__slider">
-                                            <div class="testimonial-two__slider-single">
-                                                <div class="paragraph">
-                                                    <blockquote class="secondary-text">
-                                                        <q>Welcome to our digital agency We specialize in helping
-                                                            business most like
-                                                            yours succeed online. From website design and development to
-                                                            digital
-                                                            marketing agency</q>
-                                                    </blockquote>
-                                                </div>
-                                                <div class="author-meta">
-                                                    <div class="author-meta__thumb">
-                                                        <img src="assets/images/testimonial/avatar.png"
-                                                            alt="Image">
-                                                    </div>
-                                                    <div class="author-meta__content">
-                                                        <h5>Delores Olivo</h5>
-                                                        <p>From UK</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="testimonial-two__slider-single">
-                                                <div class="paragraph">
-                                                    <blockquote class="secondary-text">
-                                                        <q>Welcome to our digital agency We specialize in helping
-                                                            business most like
-                                                            yours succeed online. From website design and development to
-                                                            digital
-                                                            marketing agency</q>
-                                                    </blockquote>
-                                                </div>
-                                                <div class="author-meta">
-                                                    <div class="author-meta__thumb">
-                                                        <img src="assets/images/testimonial/avatar.png"
-                                                            alt="Image">
-                                                    </div>
-                                                    <div class="author-meta__content">
-                                                        <h5>Delores Olivo</h5>
-                                                        <p>From UK</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="testimonial-two__slider-single">
-                                                <div class="paragraph">
-                                                    <blockquote class="secondary-text">
-                                                        <q>Welcome to our digital agency We specialize in helping
-                                                            business most like
-                                                            yours succeed online. From website design and development to
-                                                            digital
-                                                            marketing agency</q>
-                                                    </blockquote>
-                                                </div>
-                                                <div class="author-meta">
-                                                    <div class="author-meta__thumb">
-                                                        <img src="assets/images/testimonial/avatar.png"
-                                                            alt="Image">
-                                                    </div>
-                                                    <div class="author-meta__content">
-                                                        <h5>Delores Olivo</h5>
-                                                        <p>From UK</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <img src="assets/images/testimonial/star.png" alt="Image" class="star">
-                    </section>
-                    <!-- ==== / testimonial end ==== -->
-                    <!-- ==== blog start ==== -->
-                    <section class="section blog blog-two light blog-two-light">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="section__header--secondary">
-                                        <div class="row gaper align-items-center">
-                                            <div class="col-12 col-lg-8">
-                                                <div class="section__header text-center text-lg-start mb-0">
-                                                    <span class="sub-title">
-                                                        news & Blog
-                                                        <i class="fa-solid fa-arrow-right"></i>
-                                                    </span>
-                                                    <h2 class="title title-anim">what's new in blog</h2>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-lg-4">
-                                                <div class="slide-group justify-content-center justify-content-lg-end">
-                                                    <a href="javascript:void(0)" aria-label="previous item"
-                                                        class="slide-btn prev-blog">
-                                                        <i class="fa-light fa-angle-left"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0)" aria-label="next item"
-                                                        class="slide-btn next-blog">
-                                                        <i class="fa-light fa-angle-right"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog-two__slider">
-                            <div class="blog-two__slider-single topy-tilt">
-                                <div class="blog__single-thumb">
-                                    <a href="blog-single.html">
-                                        <img src="assets/images/blog/three.png" alt="Image">
-                                    </a>
-                                </div>
-                                <div class="blog__single-content">
-                                    <h4>
-                                        <a href="blog-single.html">A Simple Social Media Marketing Checklist</a>
-                                    </h4>
-                                    <div class="blog__single-meta">
-                                        <a href="blog.html" class="sub-title">
-                                            creative
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </a>
-                                        <p>MARCH 23, 2023</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="blog-two__slider-single topy-tilt">
-                                <div class="blog__single-thumb">
-                                    <a href="blog-single.html">
-                                        <img src="assets/images/blog/four.png" alt="Image">
-                                    </a>
-                                </div>
-                                <div class="blog__single-content">
-                                    <h4>
-                                        <a href="blog-single.html">Transforming Challenges into Opportunities</a>
-                                    </h4>
-                                    <div class="blog__single-meta">
-                                        <a href="blog.html" class="sub-title">
-                                            creative
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </a>
-                                        <p>MARCH 23, 2023</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="blog-two__slider-single topy-tilt">
-                                <div class="blog__single-thumb">
-                                    <a href="blog-single.html">
-                                        <img src="assets/images/blog/five.png" alt="Image">
-                                    </a>
-                                </div>
-                                <div class="blog__single-content">
-                                    <h4>
-                                        <a href="blog-single.html">A Simple Social Media Marketing Checklist</a>
-                                    </h4>
-                                    <div class="blog__single-meta">
-                                        <a href="blog.html" class="sub-title">
-                                            creative
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </a>
-                                        <p>MARCH 23, 2023</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="blog-two__slider-single topy-tilt">
-                                <div class="blog__single-thumb">
-                                    <a href="blog-single.html">
-                                        <img src="assets/images/blog/three.png" alt="Image">
-                                    </a>
-                                </div>
-                                <div class="blog__single-content">
-                                    <h4>
-                                        <a href="blog-single.html">A Simple Social Media Marketing Checklist</a>
-                                    </h4>
-                                    <div class="blog__single-meta">
-                                        <a href="blog.html" class="sub-title">
-                                            creative
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </a>
-                                        <p>MARCH 23, 2023</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="blog-two__slider-single topy-tilt">
-                                <div class="blog__single-thumb">
-                                    <a href="blog-single.html">
-                                        <img src="assets/images/blog/four.png" alt="Image">
-                                    </a>
-                                </div>
-                                <div class="blog__single-content">
-                                    <h4>
-                                        <a href="blog-single.html">Transforming Challenges into Opportunities</a>
-                                    </h4>
-                                    <div class="blog__single-meta">
-                                        <a href="blog.html" class="sub-title">
-                                            creative
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </a>
-                                        <p>MARCH 23, 2023</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="blog-two__slider-single topy-tilt">
-                                <div class="blog__single-thumb">
-                                    <a href="blog-single.html">
-                                        <img src="assets/images/blog/five.png" alt="Image">
-                                    </a>
-                                </div>
-                                <div class="blog__single-content">
-                                    <h4>
-                                        <a href="blog-single.html">A Simple Social Media Marketing Checklist</a>
-                                    </h4>
-                                    <div class="blog__single-meta">
-                                        <a href="blog.html" class="sub-title">
-                                            creative
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </a>
-                                        <p>MARCH 23, 2023</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- ==== / blog end ==== -->
-                    <!-- ==== cta start ==== -->
-                    <section class="cta-s">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="cta__wrapper" data-background="assets/images/cta-bg.png">
-                                        <div class="row justify-content-center">
-                                            <div class="col-12 col-md-10 col-lg-9 col-xl-8 col-xxl-9">
-                                                <div class="section__header text-center">
-                                                    <h2 class="title">Stay Ahead With Our Top Notch Digital Services
-                                                    </h2>
-                                                </div>
-                                                <div class="footer__single-form">
-                                                    <form action="#" method="post">
-                                                        <div class="input-email">
-                                                            <input type="email" name="subscribe-news"
-                                                                id="subscribeNews" placeholder="Enter Your Email"
-                                                                required>
-                                                            <button type="submit" class="subscribe">
-                                                                <i class="fa-sharp fa-solid fa-paper-plane"></i>
-                                                            </button>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <img src="assets/images/testimonial/star.png" alt="Image" class="star">
-                                        <img src="assets/images/testimonial/star.png" alt="Image"
-                                            class="star-two">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- ==== / cta end ==== -->
-                    <!-- ==== next page start ==== -->
-                    <section class="section next-page next-p-two-light">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-12 col-lg-8">
-                                    <div class="section__header text-center">
-                                        <a href="about-us.html" class="sub-title mb-0">
-                                            Next Page
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="next__text-slider">
-                            <div class="next__text-slider-single">
-                                <h2 class="h1">
-                                    <a href="about-us.html">
-                                        About Us
-                                        <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                    </a>
-                                </h2>
-                            </div>
-                            <div class="next__text-slider-single">
-                                <h2 class="h1">
-                                    <a href="about-us.html">
-                                        About Us
-                                        <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                    </a>
-                                </h2>
-                            </div>
-                            <div class="next__text-slider-single">
-                                <h2 class="h1">
-                                    <a href="about-us.html">
-                                        About Us
-                                        <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                    </a>
-                                </h2>
-                            </div>
-                            <div class="next__text-slider-single">
-                                <h2 class="h1">
-                                    <a href="about-us.html">
-                                        About Us
-                                        <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                    </a>
-                                </h2>
-                            </div>
-                            <div class="next__text-slider-single">
-                                <h2 class="h1">
-                                    <a href="about-us.html">
-                                        About Us
-                                        <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                    </a>
-                                </h2>
-                            </div>
-                            <div class="next__text-slider-single">
-                                <h2 class="h1">
-                                    <a href="about-us.html">
-                                        About Us
-                                        <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                    </a>
-                                </h2>
-                            </div>
-                            <div class="next__text-slider-single">
-                                <h2 class="h1">
-                                    <a href="about-us.html">
-                                        About Us
-                                        <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                    </a>
-                                </h2>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- ==== / next page end ==== -->
-                </main>
-                <!-- ==== / main end ==== -->
-                <!-- ==== footer start ==== -->
-                <footer class="footer-two section pb-0">
-                    <div class="container">
-                        <div class="row gaper">
-                            <div class="col-12 col-lg-5 col-xl-4">
-                                <div class="footer-two__left">
-                                    <div class="logo">
-                                        <a href="index.html">
-                                            <img src="assets/images/logo.png" alt="Image">
-                                        </a>
-                                    </div>
-                                    <div class="paragraph">
-                                        <p>Welcome to our digital agency We specialize in helping business most like
-                                            yours succeed
-                                            online. From website design and development.</p>
-                                    </div>
-                                    <div class="section__content-cta">
-                                        <h2>
-                                            <a href="mailto:info@gmail.com" class="folks-text">info@gmail.com</a>
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-7 col-xl-7 offset-xl-1 col-xxl-5 offset-xxl-3">
-                                <div class="footer-two__right">
-                                    <div class="social justify-content-start justify-content-lg-start">
-                                        <a href="https://www.facebook.com/" target="_blank">
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                            <span>Facebook</span>
-                                        </a>
-                                        <a href="https://www.twitter.com/" target="_blank">
-                                            <i class="fa-brands fa-twitter"></i>
-                                            <span>Twitter</span>
-                                        </a>
-                                        <a href="https://www.pinterest.com/" target="_blank">
-                                            <i class="fa-brands fa-linkedin-in"></i>
-                                            <span>Linkedin</span>
-                                        </a>
-                                        <a href="https://www.instagram.com/" target="_blank">
-                                            <i class="fa-brands fa-instagram"></i>
-                                            <span>Instagram</span>
-                                        </a>
-                                        <a href="https://www.dribble.com/" target="_blank">
-                                            <i class="fa-light fa-basketball"></i>
-                                            <span>Dribble</span>
-                                        </a>
-                                    </div>
-                                    <div class="footer__single-meta section__content-cta">
-                                        <a href="https://www.google.com/maps/d/viewer?mid=1UZ57Drfs3SGrTgh6mrYjQktu6uY&hl=en_US&ll=18.672105000000013%2C105.68673800000003&z=17"
-                                            target="_blank">
-                                            <i class="fa-sharp fa-solid fa-location-dot"></i>
-                                            901 N Pitt Str., Suite 170
-                                            Alexandria, USA
-                                        </a>
-                                        <a href="tel:406-555-0120">
-                                            <i class="fa-sharp fa-solid fa-phone-volume"></i>
-                                            (406) 555-0120
-                                        </a>
-                                        <a href="mailto:info@xpovio.com">
-                                            <i class="fa-sharp fa-solid fa-envelope"></i>
-                                            info@xpovio.com
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer__copyright">
-                        <div class="container">
-                            <div class="row align-items-center gaper">
-                                <div class="col-12 col-xl-6">
-                                    <div class="footer__copyright-text text-center text-xl-start">
-                                        <p>
-                                            Copyright &copy;
-                                            <span id="copyYear"></span>
-                                            Xpovio by
-                                            <a href="https://themeforest.net/user/gramentheme/"
-                                                target="_blank">GramenTheme</a>
-                                            . All Rights Reserved
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-xl-6">
-                                    <ul class="justify-content-center justify-content-xl-end">
-                                        <li>
-                                            <a href="index.html">Home</a>
-                                        </li>
-                                        <li>
-                                            <a href="about-us.html">About</a>
-                                        </li>
-                                        <li>
-                                            <a href="our-services.html">Services</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog.html">Blog</a>
-                                        </li>
-                                        <li>
-                                            <a href="contact-me.html">Contact</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-                <!-- ==== / footer end ==== -->
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold">
+                Rubaya Nasrin Shejuti
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Impact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
             </div>
         </div>
-        <!-- ==== scroll to top start ==== -->
-        <button class="progress-wrap" aria-label="scroll indicator" title="go to top">
-            <span></span>
-            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-            </svg>
-        </button>
-        <!-- ==== / scroll to top end ==== -->
-        <!-- video modal -->
-        {{-- <div class="vid-m">
-            <div class="vid-c">
-                <a href="javascript:void(0)" aria-label="close video popup" class="close-v">
-                    <i class="fa-light fa-xmark-large"></i>
-                </a>
-                <video autoplay="autoplay" loop muted controls>
-                    <source src="assets/images/popup-video.mp4" type="video/mp4">
-                </video>
-                <h5>Hello</h5>
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 text-center">
+                    <img src="{{ asset('assets/images/1672715021102.jpeg') }}" class="profile-img">
+                </div>
+
+                <div class="col-lg-7">
+                    <h1 class="hero-title">
+                        Rubaya Nasrin Shejuti
+                    </h1>
+                    <p class="hero-sub">
+                        Development Professional • Climate Change • Sustainability
+                    </p>
+                    <p>
+                        Program Officer at Oxfam Bangladesh and Adjunct Faculty at University of South Asia.
+                        Working on climate justice, environmental sustainability and disaster resilience.
+                    </p>
+                    <a href="https://www.linkedin.com/in/rubaya-nasrin-shejuti-66713a6b"
+                        class="btn btn-light btn-lg mt-3" target="_blank">
+                        LinkedIn Profile </a>
+                </div>
             </div>
-        </div> --}}
-    </div>
-    <!-- ==== js dependencies start ==== -->
-    <!-- jquery -->
-    <script src="assets/vendor/jquery/jquery-3.7.0.min.js"></script>
-    <!-- bootstrap five js -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- nice select js -->
-    <script src="assets/vendor/nice-select/js/jquery.nice-select.min.js"></script>
-    <!-- magnific popup js -->
-    <script src="assets/vendor/magnific-popup/js/jquery.magnific-popup.min.js"></script>
-    <!-- slick js -->
-    <script src="assets/vendor/slick/js/slick.min.js"></script>
-    <!-- image loaded js -->
-    <script src="assets/vendor/images-loaded/imagesloaded.pkgd.min.js"></script>
-    <!-- isotope js -->
-    <script src="assets/vendor/isotope/isotope.pkgd.min.js"></script>
-    <!-- chroma js -->
-    <script src="assets/vendor/gsap/chroma.min.js"></script>
-    <!-- splittext js -->
-    <script src="assets/vendor/gsap/SplitText.min.js"></script>
-    <!-- scrollsmoother js -->
-    {{-- <script src="assets/vendor/gsap/ScrollSmoother.min.js"></script> --}}
-    <!-- scrollto js -->
-    <script src="assets/vendor/gsap/ScrollToPlugin.min.js"></script>
-    <!-- scrolltrigger js -->
-    <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
-    <!-- gsap js -->
-    <script src="assets/vendor/gsap/gsap.min.js"></script>
-    <!-- vanilla tilt js -->
-    <script src="assets/vendor/vanilla-tilt/tilt.jquery.js"></script>
-    <!-- ==== / js dependencies end ==== -->
-    <!-- plugins js -->
-    <script src="assets/js/plugins.js"></script>
-    <!-- main js -->
-    <script src="assets/js/main.js"></script>
+        </div>
+    </section>
+
+    <!-- FEATURED SECTION -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">Featured</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card h-100">
+                        <img src="{{ asset('featured-1662609722999.jpeg') }}" alt="Featured in Newspaper"
+                            class="featured-img mb-3">
+                        <h6>Featured at Daily Ittefaq News Paper 18.12.2019</h6>
+                        <p class="mb-0">Featured for environmental and climate change work in Bangladesh.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card h-100">
+                        <img src="{{ asset('featured-1696918920458.jpeg') }}" alt="Memories I will cherish forever"
+                            class="featured-img mb-3">
+                        <h6>Memories I will cherish forever</h6>
+                        <p class="mb-0">Special moments from fieldwork and collaborations in climate action.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card h-100">
+                        <img src="{{ asset('featured-1661013337186.jpeg') }}" alt="UPG Sustainability Leader"
+                            class="featured-img mb-3">
+                        <h6>UPG Sustainability Leader</h6>
+                        <p class="mb-0">Recognized for leadership in project management, sustainability, and climate
+                            change education.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED -->
+    <section class="section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <h4>Climate Research</h4>
+                        <p>Environmental research and climate adaptation strategies.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <h4>Development Programs</h4>
+                        <p>Working with NGOs and institutions on sustainability initiatives.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <h4>Academic Teaching</h4>
+                        <p>Teaching environmental science and sustainability courses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">About</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <p>
+                        I am a development professional focusing on climate change adaptation,
+                        sustainability and environmental research. My work focuses on building
+                        climate resilience and supporting sustainable development initiatives.
+                    </p>
+                    <p>
+                        My academic and professional journey combines environmental science,
+                        climate modeling and development practice.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section id="expertise" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Areas of Expertise</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="expertise-card">
+                        Climate Change Adaptation
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="expertise-card">
+                        Environmental Research
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="expertise-card">
+                        Disaster Risk Management
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="expertise-card">
+                        GIS & Remote Sensing
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h5>Program Officer</h5>
+                    <span>Oxfam Bangladesh | 2024 – Present</span>
+                    <p>Working on Just Energy Transition, Climate Justice and Natural Resource Rights.</p>
+                </div>
+                <div class="timeline-item">
+                    <h5>Adjunct Faculty</h5>
+                    <span>University of South Asia | 2022 – Present</span>
+                </div>
+                <div class="timeline-item">
+                    <h5>Green Response Officer</h5>
+                    <span>Bangladesh Red Crescent Society | 2023 – 2024</span>
+                </div>
+                <div class="timeline-item">
+                    <h5>Assistant Manager</h5>
+                    <span>Grameen Shakti | 2022 – 2023</span>
+                </div>
+                <div class="timeline-item">
+                    <h5>Assistant Director</h5>
+                    <span>TMSS | 2020 – 2022</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Impact & Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <h5>Climate Justice Programs</h5>
+                        <p>
+                            Working with Oxfam Bangladesh to support climate justice and
+                            natural resource rights initiatives.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <h5>Environmental Capacity Building</h5>
+                        <p>
+                            Organizing environmental training and capacity building
+                            programs for stakeholders and institutions.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <h5>Sustainability Research</h5>
+                        <p>
+                            Research initiatives focusing on environmental sustainability
+                            and climate resilience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Leadership & Awards</h2>
+            <ul class="list-group col-lg-6 mx-auto">
+                <li class="list-group-item">Duke of Edinburgh Gold Award</li>
+                <li class="list-group-item">UPG Sustainability Leader 2022</li>
+                <li class="list-group-item">World Food Forum Mentor (2023–2024)</li>
+                <li class="list-group-item">YVC Leader 2025</li>
+                <li class="list-group-item">Asian African Youth Leadership Festival Alumni</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+        <div class="container text-center">
+            <h2 class="section-title">Contact</h2>
+            <p>Dhaka, Bangladesh</p>
+            <a href="https://www.linkedin.com/in/rubaya-nasrin-shejuti-66713a6b" class="btn btn-lg"
+                style="background: linear-gradient(135deg, #44b373, #2cae71); color: white;" target="_blank">
+                LinkedIn Profile
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p class="mb-0">
+                © 2026 Rubaya Nasrin Shejuti
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
