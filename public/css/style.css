@@ -1,0 +1,7 @@
+body {
+    background-image: url(../images/background/pexels-pixabay-417173.jpg); 
+    background-position: center center; 
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
