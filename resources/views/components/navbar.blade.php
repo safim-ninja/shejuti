@@ -1,6 +1,6 @@
 <nav class="w-full bg-white shadow-sm">
     <div class="container mx-auto flex flex-wrap items-center justify-between py-2 px-4">
-        <a class="text-2xl font-bold">{{ profile()->name }}</a>
+        <a href="{{ route('home') }}" class="text-2xl font-bold">{{ profile()->name }}</a>
         <button class="block lg:hidden text-gray-700 focus:outline-none"
             onclick="document.getElementById('menu').classList.toggle('hidden')">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
