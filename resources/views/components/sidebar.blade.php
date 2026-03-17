@@ -1,7 +1,8 @@
 <div class="sidebar fixed top-0 left-0 h-screen bg-emerald-900 text-white w-60 pt-8 flex flex-col">
     <h4 class="text-center mb-8 font-semibold text-lg">Portfolio Admin</h4>
-    <a href="{{ route('admin') }}" class="block px-6 py-3 text-white text-sm {{ request()->routeIs('admin') ? 'bg-emerald-700' : 'hover:bg-emerald-800' }}">Dashboard</a>
+    <a href="{{ route('admin.dashboard') }}" class="block px-6 py-3 text-white text-sm {{ request()->routeIs('admin.dashboard') ? 'bg-emerald-700' : 'hover:bg-emerald-800' }}">Dashboard</a>
     <a href="{{ route('admin.profile') }}" class="block px-6 py-3 text-white text-sm {{ request()->routeIs('admin.profile') ? 'bg-emerald-700' : 'hover:bg-emerald-800' }}">Profile</a>
+    <a href="{{ route('admin.blogs') }}" class="block px-6 py-3 text-white text-sm {{ request()->routeIs('admin.blogs') ? 'bg-emerald-700' : 'hover:bg-emerald-800' }}">Blog</a>
     <a href="{{ route('admin.experience') }}" class="block px-6 py-3 text-white text-sm {{ request()->routeIs('admin.experience') ? 'bg-emerald-700' : 'hover:bg-emerald-800' }}">Experience</a>
     <a href="{{ route('admin.projects') }}" class="block px-6 py-3 text-white text-sm {{ request()->routeIs('admin.projects') ? 'bg-emerald-700' : 'hover:bg-emerald-800' }}">Projects</a>
     <a href="{{ route('admin.expertise') }}" class="block px-6 py-3 text-white text-sm {{ request()->routeIs('admin.expertise') ? 'bg-emerald-700' : 'hover:bg-emerald-800' }}">Expertise</a>

@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
+use App\Models\Experience;
+use App\Models\Profile;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -9,16 +12,27 @@ class AdminController extends Controller
     public function dashboard()
     {
         return view('admin.dashboard');
-    }
-
-    public function profile()
+    }    
+    public function experiences()
     {
-        return view('admin.profile');
+        $experiences = Experience::latest()->get();
+        return view('admin.experience', compact('experiences'));
     }
-
-    public function experience()
+    public function createExperience()
     {
-        return view('admin.experience');
+        return view('admin.create-experience');
+    }
+    public function storeExperience(Request $request)
+    {
+        $experience = new Experience();
+        $experience->position = $request->input('position');
+        $experience->organization = $request->input('organization');
+        $experience->organization_url = $request->input('organization_url');
+        $experience->period = $request->input('period');
+        $experience->description = $request->input('description');
+        $experience->save();
+
+        return redirect()->route('admin.experience')->with('status', 'Experience created successfully!');
     }
 
     public function projects()
@@ -26,7 +40,7 @@ class AdminController extends Controller
         return view('admin.projects');
     }
 
-    public function expertise()
+    public function expertises()
     {
         return view('admin.expertise');
     }

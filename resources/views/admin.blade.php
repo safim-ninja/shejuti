@@ -30,7 +30,11 @@
             <h5 class="mb-0 text-lg font-semibold">Dashboard</h5>
             <div class="flex items-center">
                 <span class="mr-3">Admin</span>
-                <a href="/logout" class="border border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition rounded px-3 py-1 text-sm">Logout</a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="border border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition rounded px-3 py-1 text-sm">Logout</button>
+                </form>
+                {{-- <a href="/logout" class="border border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition rounded px-3 py-1 text-sm">Logout</a> --}}
             </div>
         </div>
 
