@@ -9,15 +9,16 @@
                 </path>
             </svg>
         </button>
-        <div class="w-full lg:flex lg:items-center lg:w-auto hidden lg:block" id="menu">
+        <div class="w-full lg:items-center lg:w-auto hidden lg:block" id="menu">
             <ul class="flex flex-col lg:flex-row mt-4 lg:mt-0 lg:ml-auto">
-                <li><a class="block py-2 px-2 mx-2 text-gray-700 {{ navActive('home') }}" href="{{ route('home') }}">Home</a></li>
-                <li><a class="block py-2 px-2 mx-2 text-gray-700 {{ navActive('blogs') }}" href="{{ route('blogs') }}">Blogs</a></li>
-                {{-- <li><a class="block py-2 px-4 text-gray-700 {{ navActive('about') }}" href="#about">About</a></li> --}}
-                {{-- <li><a class="block py-2 px-4 text-gray-700 {{ navActive('expertise') }}" href="#expertise">Expertise</a></li> --}}
-                <li><a class="block py-2 px-4 text-gray-700 {{ navActive('experience') }}" href="{{ route('experience') }}">Experience</a></li>
-                {{-- <li><a class="block py-2 px-4 text-gray-700 {{ navActive('projects') }}" href="#projects">Impact</a></li> --}}
-                {{-- <li><a class="block py-2 px-4 text-gray-700 {{ navActive('contact') }}" href="#contact">Contact</a></li> --}}
+                {{-- Home,Portfolio,Blogs,Contact,About me --}}
+                <li><a class="block py-2 px-2 mx-2 {{ navActive('home') }}" href="{{ route('home') }}">Home</a></li>
+                <li><a class="block py-2 px-2 mx-2 {{ navActive('blogs') }}" href="{{ route('blogs') }}">Blogs</a></li>
+                <li><a class="block py-2 px-4 {{ navActive('about') }}" href="#about">About</a></li>
+                {{-- <li><a class="block py-2 px-4 {{ navActive('expertise') }}" href="#expertise">Expertise</a></li> --}}
+                <li><a class="block py-2 px-4 {{ navActive('experience') }}" href="{{ route('experience') }}">Experience</a></li>
+                {{-- <li><a class="block py-2 px-4 {{ navActive('projects') }}" href="#projects">Impact</a></li> --}}
+                <li><a class="block py-2 px-4 {{ navActive('contact') }}" href="#contact">Contact</a></li>
             </ul>
         </div>
     </div>
