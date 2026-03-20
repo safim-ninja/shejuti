@@ -12,7 +12,7 @@ class AdminController extends Controller
     public function dashboard()
     {
         return view('admin.dashboard');
-    }    
+    }
     public function experiences()
     {
         $experiences = Experience::latest()->get();
@@ -34,7 +34,30 @@ class AdminController extends Controller
 
         return redirect()->route('admin.experience')->with('status', 'Experience created successfully!');
     }
+    public function editExperience($id)
+    {
+        $experience = Experience::findOrFail($id);
+        return view('admin.edit-experience', compact('experience'));
+    }
+    public function updateExperience(Request $request, $id)
+    {
+        $experience = Experience::findOrFail($id);
+        $experience->position = $request->input('position');
+        $experience->organization = $request->input('organization');
+        $experience->organization_url = $request->input('organization_url');
+        $experience->period = $request->input('period');
+        $experience->description = $request->input('description');
+        $experience->save();
 
+        return redirect()->route('admin.experience')->with('status', 'Experience updated successfully!');
+    }
+    public function destroyExperience($id)
+    {
+        $experience = Experience::findOrFail($id);
+        $experience->delete();
+
+        return redirect()->route('admin.experience')->with('status', 'Experience deleted successfully!');
+    }
     public function projects()
     {
         return view('admin.projects');

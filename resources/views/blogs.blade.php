@@ -8,7 +8,7 @@
                     <div
                         class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col hover:-translate-y-1 transition">
                         <a href="{{ route('blog.show', $blog->id) }}">
-                            <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" class="w-full h-56 object-cover" />
+                            <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}" class="w-full h-80 object-cover" />
                         </a>
                         <div class="p-6 flex flex-col flex-1">
                             <h2 class="text-2xl font-bold mb-2">

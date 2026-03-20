@@ -4,6 +4,9 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\ProfileController as AdminProfileController;
+use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Admin\ResearchController;
+use App\Http\Controllers\Admin\SeminarController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -12,6 +15,8 @@ Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/blogs', [HomeController::class, 'blogs'])->name('blogs');
 Route::get('/blog/{id}', [HomeController::class, 'blog'])->name('blog.show');
 Route::get('/experience', [HomeController::class, 'experience'])->name('experience');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
 Route::get('dashboard', function () {
     return view('dashboard');
@@ -42,8 +47,12 @@ Route::middleware('auth')->group(function () {
         Route::put('/experiences/{id}', [AdminController::class, 'updateExperience'])->name('experience.update');
         Route::delete('/experiences/{id}', [AdminController::class, 'destroyExperience'])->name('experience.destroy');
 
+        Route::resource('projects', ProjectController::class);
+        Route::resource('research', ResearchController::class);
+        Route::resource('seminars', SeminarController::class);
 
-        Route::get('/projects', [AdminController::class, 'projects'])->name('projects');
+
+        // Route::get('/projects', [AdminController::class, 'projects'])->name('projects');
         Route::get('/expertise', [AdminController::class, 'expertise'])->name('expertise');
         Route::get('/education', [AdminController::class, 'education'])->name('education');
         Route::get('/awards', [AdminController::class, 'awards'])->name('awards');

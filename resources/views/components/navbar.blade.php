@@ -14,11 +14,11 @@
                 {{-- Home,Portfolio,Blogs,Contact,About me --}}
                 <li><a class="block py-2 px-2 mx-2 {{ navActive('home') }}" href="{{ route('home') }}">Home</a></li>
                 <li><a class="block py-2 px-2 mx-2 {{ navActive('blogs') }}" href="{{ route('blogs') }}">Blogs</a></li>
-                <li><a class="block py-2 px-4 {{ navActive('about') }}" href="#about">About</a></li>
+                <li><a class="block py-2 px-4 {{ navActive('about') }}" href="{{ route('about') }}">About Me</a></li>
                 {{-- <li><a class="block py-2 px-4 {{ navActive('expertise') }}" href="#expertise">Expertise</a></li> --}}
-                <li><a class="block py-2 px-4 {{ navActive('experience') }}" href="{{ route('experience') }}">Experience</a></li>
+                {{-- <li><a class="block py-2 px-4 {{ navActive('experience') }}" href="{{ route('experience') }}">Experience</a></li> --}}
                 {{-- <li><a class="block py-2 px-4 {{ navActive('projects') }}" href="#projects">Impact</a></li> --}}
-                <li><a class="block py-2 px-4 {{ navActive('contact') }}" href="#contact">Contact</a></li>
+                <li><a class="block py-2 px-4 {{ navActive('contact') }}" href="{{ route('contact') }}">Contact</a></li>
             </ul>
         </div>
     </div>

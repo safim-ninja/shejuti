@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\Experience;
+use App\Models\Project;
+use App\Models\Research;
+use App\Models\Seminar;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -30,5 +33,18 @@ class HomeController extends Controller
     {
         $experiences = Experience::latest()->get();
         return view('experience', compact('experiences'));
+    }
+    public function about()
+    {
+        $researches = Research::latest()->get();
+        $experiences = Experience::latest()->get();
+        $projects = Project::latest()->get();
+        $seminars = Seminar::latest()->get();
+        return view('about', compact('researches', 'experiences', 'projects', 'seminars'));
+    }
+
+    public function contact()
+    {
+        return view('contact');
     }
 }
